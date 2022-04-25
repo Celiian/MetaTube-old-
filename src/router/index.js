@@ -5,7 +5,7 @@ import Home from '../views/Home.vue'
 const routes = [
   {
     path: '/',
-    name: 'TODO',
+    name: 'App',
     component: Home
   },
   {
