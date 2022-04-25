@@ -1,19 +1,24 @@
 <template>
-  <h1>{{ t('global.title') }}</h1>
+    <Navbar />
+    <router-view />
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
+import Navbar from "./components/Navbar.vue"
 
 export default defineComponent({
-  name: 'HelloI18n',
-  setup() {
-    const { t } = useI18n({
-      inheritLocale: true,
-      useScope: 'local'
-    })
-    return { t }
-  }
-})
+  components:{
+    Navbar,
+  },
+    name: "HelloI18n",
+    setup() {
+        const { t } = useI18n({
+            inheritLocale: true,
+            useScope: "local",
+        });
+        return { t };
+    },
+});
 </script>
