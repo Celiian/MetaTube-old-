@@ -17,5 +17,3 @@ export default defineComponent({
   }
 })
 </script>
-
-essai pour elim
