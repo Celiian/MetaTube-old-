@@ -1,5 +1,6 @@
 <template>
   <h1>{{ t('global.title') }}</h1>
+  <router-view />
 </template>
 
 <script>
