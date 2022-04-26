@@ -1,6 +1,6 @@
 <template>
-<section>
-        <button type="button" @click="displayfilter" id="filter-button">Filtres</button>
+    <section>
+        <button type="button" v-on:click="displayfilter()" id="filter-button">Filtres</button>
         <div id="filter-box" class="row">
             <div class="column">
                 <h3>Date d'ajout</h3>
@@ -24,14 +24,14 @@
                 <a onclick="">Avis</a>
             </div>
         </div>
-    </section>
-    <section class="column">
-        <div class="row">
-            <a href=""><img src=""></a>
-            <div>
-                <h3>Titre de vidéo</h3>
-                <p>Nombre de vues</p>
-                <p>Description</p>
+        <div class="column search-card">
+            <div class="row">
+                <a href=""><img src=""></a>
+                <div>
+                    <h3>Titre de vidéo</h3>
+                    <p>Nombre de vues</p>
+                    <p>Description</p>
+                </div>
             </div>
         </div>
     </section>
