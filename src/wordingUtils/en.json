@@ -1,5 +1,31 @@
 {
   "global": {
-      "title": "MetaTube"
+    "title": "MetaTube"
+  },
+  "menu": {
+    "nav-elements": {
+      "Home": "Accueil",
+      "Explorer": "Explorer",
+      "Subscriptions": "Abonnements",
+      "Library": "Bibliothèque",
+      "History": "Historique",
+      "YourVideos": "Vos vidéos",
+      "WatchLaters": "À regarder plus tard",
+      "LikedVideos": "Vidéos likées",
+      "More": "Plus",
+      "Less": "Moins"
+    },
+    "titles":{
+      "subscriptions": "ABONNEMENTS",
+      "others":"AUTRES CONTENUS YOUTUBE"
+    },
+    "footer": {
+      "link1": "Lien1",
+      "link2": "Lien2",
+      "link3": "Lien3",
+      "link4": "Lien4",
+      "link5": "Lien5",
+      "copyright": "© 2022 Metatubes -L1 Alt Cergy/Paris ❤️"
+    }
   }
 }
