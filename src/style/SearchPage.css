@@ -1,1 +1,64 @@
 
+    body{
+        margin: 0px;
+    }
+    #filter-button{
+        padding: 1%;
+        font-size: var(--font-medium);
+        background-color: var(--dark-theme);
+        color: var(--dark-text);
+        margin-top: 30px;
+        margin-left: 5%;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap : wrap;
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex-wrap : wrap;
+    }
+    .video-title{
+        margin-bottom: 0px;
+    }
+    .video-watch-count{
+        margin-top: 0px;
+    }
+    .video-text{
+        font-size: var(--font-small);
+    }
+    #filter-box{
+        display : none;
+        width: 90%;
+        padding: 2%;
+        border-bottom: 1px solid var(--dark-text);
+        background-color: var(--dark-theme);
+        color: var(--dark-text);
+    }
+    .filter-box-title{
+        font-size: var(--font-large);
+    }
+    .search-card{
+        width: 90%;
+        margin-top: 16px;
+        color: var(--dark-text);
+    }
+    .filter-box-menu{
+        width: 33%;
+    }
+    .filter-box-menu-button{
+        font-size: var(--font-medium);
+    }
+    #search-page{
+        background-color: var(--dark-theme);
+    }
+    #search-page-content{
+        justify-content: center;
+    }
+    .video-img{
+        width: 350px;
+        height: 200px;
+        margin-right: 16px;
+    }

@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import i18n from './i18n'
-import searchPage from './components/SearchPage.vue'
+import searchBar from './components/SearchBar.vue'
 
-createApp(searchPage).use(i18n).mount('#app')
+createApp(searchBar).use(i18n).mount('#app')
