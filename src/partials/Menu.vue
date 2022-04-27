@@ -58,7 +58,7 @@
           <span class="line"></span>
         </div>
       </div>
-      <img src="../img/Logo/LogoMetatube.svg" class="logo-header-menu" />
+      <img src="../img/Logo/MetatubeLogo.png" class="logo-header-menu" />
     </div>
 
     <div class="nav-body">
