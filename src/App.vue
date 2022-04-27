@@ -22,8 +22,3 @@ export default defineComponent({
     },
 });
 </script>
-<<<<<<< HEAD
-
-essai
-=======
->>>>>>> 8859d9b33a36c5b0cc8a2ecfa47124d6cb67bf59
