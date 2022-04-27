@@ -1,19 +1,19 @@
 <template>
-	<div id="feature-channel-app">
-		<button id="feature-channel-upload" @click="launchOpen()">Upload</button>
-		<div class="feature-channel-pop">
-			<div class="feature-channel-pop-zone" v-if="(showModal = true)">
-				<input
-					type="file"
-					accept="video/*"
-					@change="handleFileUpload($event)"
-				/>
-			</div>
-			<button @click="php()">PHP</button>
-		</div>
+	<div class="fileDiv">
+    <form enctype="multipart/form-data">
+		<label for="file" class="btn">Select Video</label>
+		<input
+			id="file"
+			style="visibility: hidden"
+			type="file"
+			accept="video/*"
+			@change="handleFileUpload($event)"
+		/>
+    </form>
 	</div>
+	<button class="php" @click="php()">PHP</button>
 
-  <img :src="img">
+	<img :src="img" />
 
 	<div class="feature-channel-videoplayer">
 		<h1>{{ t("global.title") }}</h1>
@@ -39,14 +39,14 @@
 	export default {
 		name: "App",
 		setup() {
-      const img = ref(null);
+			const img = ref(null);
 			const video = FileList;
 			const { t } = useI18n({
 				inheritLocale: true,
 				useScope: "local",
 			});
 			return {
-        img,
+				img,
 				video,
 				t,
 			};
@@ -59,7 +59,7 @@
 
 				reader.readAsDataURL(this.file);
 				this.video = this.file;
-				console.log(this.video);
+				// console.log(this.video);
 				reader.addEventListener("load", function () {
 					video.src = reader.result;
 				});
@@ -70,28 +70,43 @@
 				this.previewVideo();
 			},
 			submitFile() {
+				console.log("Submiting ...");
+        //console.log(this.video);
 				let reader = new FileReader();
-				reader.readAsArrayBuffer(this.file);
-				reader.addEventListener("load", function () {});
-				let formData = new FormData();
-				formData.append("file", this.video.stream());
-				axios
-					.post("/api/api.php", formData, {})
-					.then(function (response) {
-						console.log(response);
-					})
-					.catch(function () {
-						console.log("FAILURE!!");
-					});
+        const vid = this.video
+        reader.readAsBinaryString( vid ); 
+
+        reader.onloadend = function () {
+					let formData = new FormData();
+          console.log(reader.result);
+          formData.append("file", reader.result);
+          
+          axios
+                  .post("/api/api.php",{
+                    data: {
+                      data: reader.result.toString(),
+                    }
+                  })
+                  .then(function(response){
+                    console.log(response)
+                      console.log('succes')
+                  })
+                  .catch(function(error){
+                    console.log(error)
+                  })
+        }
 			},
+
+
 
 			php() {
 				axios
 					.get("api/api.php")
 					.then((result) => {
-            console.log(result.data.split('"')[1])
-            this.img = 'data:image/jpeg;base64,' + btoa(result.data.split('"')[1]);
-            console.log(this.img)
+						console.log(result.data.split('"')[1]);
+						this.img =
+							"data:image/jpeg;base64," + btoa(result.data.split('"')[1]);
+						console.log(this.img);
 					})
 					.catch((err) => {
 						console.log(err);

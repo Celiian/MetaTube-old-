@@ -3,6 +3,23 @@
 body{
     background-color: var(--light-theme);
 }
+.php {
+    margin: 1rem;
+}
+
+.fileDiv{
+    margin: 1rem;
+}
+
+.btn {
+    border-style: solid;
+    border-radius: 5%;
+    padding: 0.15rem;
+    border-width: 0.01rem;
+    border-color: #333;
+    background-color: rgb(245, 245, 245);
+}
+
 
 .vid {
     width: 280px;
