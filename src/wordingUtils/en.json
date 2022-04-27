@@ -4,27 +4,27 @@
   },
   "menu": {
     "nav-elements": {
-      "Home": "Accueil",
+      "Home": "Home",
       "Explorer": "Explorer",
-      "Subscriptions": "Abonnements",
-      "Library": "Bibliothèque",
-      "History": "Historique",
-      "YourVideos": "Vos vidéos",
-      "WatchLaters": "À regarder plus tard",
-      "LikedVideos": "Vidéos likées",
-      "More": "Plus",
-      "Less": "Moins"
+      "Subscriptions": "Subscriptions",
+      "Library": "Library",
+      "History": "History",
+      "YourVideos": "Your Videos",
+      "WatchLaters": "Watch Laters",
+      "LikedVideos": "Liked Videos",
+      "More": "More",
+      "Less": "Less"
     },
     "titles":{
-      "subscriptions": "ABONNEMENTS",
-      "others":"AUTRES CONTENUS YOUTUBE"
+      "subscriptions": "SUBSCRIPTIONS",
+      "others":"OTHERS YOUTUBE CONTENTS"
     },
     "footer": {
-      "link1": "Lien1",
-      "link2": "Lien2",
-      "link3": "Lien3",
-      "link4": "Lien4",
-      "link5": "Lien5",
+      "link1": "Link1",
+      "link2": "Link2",
+      "link3": "Link3",
+      "link4": "Link4",
+      "link5": "Link5",
       "copyright": "© 2022 Metatubes -L1 Alt Cergy/Paris ❤️"
     }
   }
