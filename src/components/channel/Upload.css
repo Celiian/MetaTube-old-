@@ -1,0 +1,29 @@
+
+
+body{
+    background-color: var(--light-theme);
+}
+
+.vid {
+    width: 280px;
+    height: 200px;
+}
+
+.feature-channel-pop-zone, .feature-channel-videoplayer{
+background: #f1f1f1;
+color: #333;
+padding: 5%;
+border: 5px solid #4D0E04;
+border-radius: 40px;
+}
+#feature-channel-upload{
+    margin:10px;
+}
+.feature-channel-pop{
+    /* background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+}
