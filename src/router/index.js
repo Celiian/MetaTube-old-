@@ -1,6 +1,8 @@
 /* eslint-disable */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Video from '../views/VideoPage.vue'
+import Channel from '../views/Channel.vue'
 
 const routes = [
   {
@@ -9,11 +11,16 @@ const routes = [
     component: Home
   },
   {
-    path: '/TODO',
-    name: 'TODO',
-    // TODO
-    component: () => import('TODO')
+    path: '/user/:id',
+    name: 'Channel',
+    component: Channel
   },
+  {
+    path: '/video/:id',
+    name: 'Video',
+    component: Video
+  },
+  //TODO créer tous les paths
 ]
 
 const router = createRouter({
