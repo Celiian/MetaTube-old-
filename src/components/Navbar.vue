@@ -18,7 +18,7 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
                 <button class="btn--logo--nav">
-                    <router-link to="/">Home</router-link>
+                    <router-link to="/">Meta Tube</router-link>
                 </button>
             </div>
             <div class="navbar--center">
@@ -46,143 +46,259 @@
             </div>
 
             <div class="navbar--side">
-                <svg
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="navbar--logo"
-                >
-                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                    <rect
-                        x="1"
-                        y="5"
-                        width="15"
-                        height="14"
-                        rx="2"
-                        ry="2"
-                    ></rect>
-                </svg>
-                <svg
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="navbar--logo"
-                >
-                    <path
-                        d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
-                    ></path>
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                </svg>
-                <div class="btn--navbar--register">
+                <div class="btn--navbar--icon">
+                    <router-link to="/">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="navbar--logo"
+                        >
+                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                            <rect
+                                x="1"
+                                y="5"
+                                width="15"
+                                height="14"
+                                rx="2"
+                                ry="2"
+                            ></rect></svg
+                    ></router-link>
+                </div>
+                <div class="btn--navbar--icon">
+                    <router-link to="/"
+                        ><svg
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="navbar--logo"
+                        >
+                            <path
+                                d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                            ></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg
+                    ></router-link>
+                </div>
+                <div v-if="!awesome" class="btn--navbar--register">
                     <router-link to="/login">Login</router-link>
                 </div>
-              
+                <div v-else class="dropdown">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzslQrjpEHSPbE3teWMa1qA8fUwgRlbg4bGA&usqp=CAU"
+                        alt=""
+                        style="width: 60px; border-radius: 50%"
+                        @click="myFunction"
+                        class="dropbtn"
+                    />
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="drop-profil">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzslQrjpEHSPbE3teWMa1qA8fUwgRlbg4bGA&usqp=CAU"
+                                alt=""
+                                style="width: 60px; border-radius: 50%"
+                            />
+                            <h3>UserName</h3>
+                        </div>
+                        <hr />
+                        <div class="drop-profil">
+                            <label class="switch">
+                                <span class="switch__span">Sombre </span>
+                                <input class="switch__input" type="checkbox" />
+                                <i class="switch__icon"></i>
+                                <span class="switch__span">Clair</span>
+                            </label>
+                        </div>
+
+                        <router-link class="drop--element" to="/">
+                            <div>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="css-i6dzq1"
+                                >
+                                    <path
+                                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                                    ></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            Votre chaine</router-link
+                        >
+                        <router-link to="/" class="drop-profil">
+                            <div>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="css-i6dzq1"
+                                >
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path
+                                        d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                                    ></path>
+                                </svg>
+                            </div>
+                            Achats et abonnement</router-link
+                        >
+                        <router-link to="/" class="drop-profil">
+                            <div>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="css-i6dzq1"
+                                >
+                                    <path
+                                        d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+                                    ></path>
+                                    <polyline
+                                        points="16 17 21 12 16 7"
+                                    ></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                            </div>
+                            Déconnexion</router-link
+                        >
+                        <router-link to="/settings" class="drop-profil">
+                            <div>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="css-i6dzq1"
+                                >
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            Paramètres</router-link
+                        >
+                        <router-link to="/" class="drop-profil">
+                            <div>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="css-i6dzq1"
+                                >
+                                    <path
+                                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            Vos données dans Meta Tube</router-link
+                        >
+                        <router-link to="/" class="drop-profil">
+                            <div>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="css-i6dzq1"
+                                >
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon
+                                        points="22 2 15 22 11 13 2 9 22 2"
+                                    ></polygon>
+                                </svg>
+                            </div>
+                            Envoyer des commentaires</router-link
+                        >
+                        <hr />
+                        <router-link to="/" class="drop-profil">
+                            Mode Restreint</router-link
+                        >
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      message: 'Hello World!'
-    }
-  }
-}
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
+export default defineComponent({
+    name: "HelloI18n",
+    setup() {
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        //Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches(".dropbtn")) {
+                const dropdowns =
+                    document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
+                    }
+                }
+            }
+        };
+        const { t } = useI18n({
+            inheritLocale: true,
+            useScope: "local",
+        });
+        const awesome = false;
+
+        return { t, myFunction, awesome };
+    },
+
+    methods: {
+        // Creating function
+    },
+});
 </script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.btn--navbar--register{
-  border:1px solid var(--dark-text);
-  padding: 5px;
-  background: #858585;
-}
-a {
-    text-decoration: none;
-    color: var(--dark-text);
-}
-.btn--logo--nav {
-    width: 50%;
-    background: none;
-    border: none;
-}
-.box--navbar {
-    width: 100%;
-    max-width: 1700px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.navbar--logo {
-    color: var(--dark-text);
-}
-.wrapper--navbar {
-    background-color: #202020;
-    padding: 12px 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 300;
-}
-.navbar--side {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    width: 20%;
-}
-.navbar--center {
-    display: flex;
-    width: 60%;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
-}
-
-.navbar__center__input {
-    background: #121212;
-    width: 70%;
-    max-width: 600px;
-    border: 1px solid #313131;
-    padding: 6px;
-    margin: 0;
-    outline: none;
-    color: #858585;
-    font-size: 1em;
-}
-.navbar__center__input::placeholder {
-    color: #858585;
-    padding-left: 0.2em;
-}
-.navbar__center__input:focus {
-    border: 1px solid #2da0ff;
-}
-.navbar__center__search-btn {
-    padding: 6px 30px;
-    background: #313131;
-    color: #858585;
-    border: none;
-    margin: 0;
-    max-width: 20%;
-}
-
-.profil--connect--user {
-    border-radius: 50%;
-}
+@import "../../src/style/navbar.css";
+@import "../../src/style/modeCheck.css";
 </style>
