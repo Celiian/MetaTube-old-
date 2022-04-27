@@ -13,14 +13,17 @@
     position: fixed;
     flex-direction: column;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    height: 100%;
+    overflow: hidden;
 }
 
 .short-menu {
+    overflow: hidden;
     position: relative;
     height: 100vh;
-    width: 15%;
+    width: 10%;
     min-width: 100px;
     display: flex;
     left: 0;
@@ -31,16 +34,15 @@
     background-color: var(--dark-theme);
 }
 
-.nav-logo-short{
+.nav-logo-short {
     width: 20px;
     height: 20px;
 }
 
 .nav-item-short p {
-    color:var(--dark-text);
+    color: var(--dark-text);
     font-family: var(--font);
-    font-size: var(--font-small);
-    letter-spacing: 0.8px;
+    font-size: var(--font-Xsmall);
 }
 
 .hamburger-button-home {
@@ -60,26 +62,27 @@
 .short-menu-items {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-item-short {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 100%;
-    margin-top: 5px;
-    padding-top: 5px;
+    padding: 20px 20px 20px 20px;
 }
-.nav-item-short:hover{
+
+.nav-item-short:hover {
     background-color: rgb(42, 42, 42);
 }
 
-.menu-hamburger-relative{
+.menu-hamburger-relative {
     position: relative;
 }
 
@@ -171,6 +174,7 @@
 .hamburger-button:active {
     background-color: var(--hamburger-button-active);
 }
+
 .hamburger-button-home:active {
     background-color: var(--hamburger-button-active);
 }
