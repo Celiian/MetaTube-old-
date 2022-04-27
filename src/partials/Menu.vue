@@ -2,52 +2,52 @@
   <div class="short-menu">
     <div class="sticky-menu">
       <div class="hamburger-button-home" v-on:click="openMenu()">
-    <div class="lines">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </div>
-  </div>
+        <div class="lines">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
       <div class="short-menu-items">
         <div class="nav-item-short">
-            <img
-              src="../img/Menu-svg/Home.svg"
-              alt=""
-              srcset=""
-              class="nav-logo-short"
-            />
-            <p>{{ t("menu.nav-elements.Home") }}</p>
-          </div>
+          <img
+            src="../img/Menu-svg/Home.svg"
+            alt=""
+            srcset=""
+            class="nav-logo-short"
+          />
+          <p>{{ t("menu.nav-elements.Home") }}</p>
+        </div>
         <div class="nav-item-short">
-            <img
-              src="../img/Menu-svg/compass.svg"
-              alt=""
-              srcset=""
-              class="nav-logo-short"
-            />
-            <p>{{ t("menu.nav-elements.Explorer") }}</p>
-          </div>
+          <img
+            src="../img/Menu-svg/compass.svg"
+            alt=""
+            srcset=""
+            class="nav-logo-short"
+          />
+          <p>{{ t("menu.nav-elements.Explorer") }}</p>
+        </div>
         <div class="nav-item-short">
-            <img
-              src="../img/Menu-svg/sublogo.svg"
-              alt=""
-              srcset=""
-              class="nav-logo-short"
-            />
-            <p>{{ t("menu.nav-elements.Subscriptions") }}</p>
-          </div>
+          <img
+            src="../img/Menu-svg/sublogo.svg"
+            alt=""
+            srcset=""
+            class="nav-logo-short"
+          />
+          <p>{{ t("menu.nav-elements.Subscriptions") }}</p>
+        </div>
         <div class="nav-item-short">
-            <img
-              src="../img/Menu-svg/library.svg"
-              alt=""
-              srcset=""
-              class="nav-logo-short"
-            />
-            <p>{{ t("menu.nav-elements.Library") }}</p>
-          </div>
+          <img
+            src="../img/Menu-svg/library.svg"
+            alt=""
+            srcset=""
+            class="nav-logo-short"
+          />
+          <p>{{ t("menu.nav-elements.Library") }}</p>
+        </div>
       </div>
     </div>
-    </div>
+  </div>
 
   <div class="hamburger-menu-container">
     <div class="header-menu">
@@ -296,9 +296,10 @@ export default defineComponent({
       const ButtonHome = document.getElementsByClassName(
         "hamburger-button-home"
       );
-      const shortMenu = document.getElementsByClassName('short-menu');
+      const shortMenu = document.getElementsByClassName("short-menu");
       menu[0].style.transform = "translateX(var(--menu-width-close))";
       menu[0].style.transition = "transform 280ms ease-out";
+
       ButtonMenu[0].style.display = "none";
       ButtonHome[0].style.display = "flex";
       shortMenu[0].style.display = "flex";
@@ -315,11 +316,12 @@ export default defineComponent({
 
       menu[0].style.transform = "translateX(var(--menu-width))";
       menu[0].style.transition = "transform 280ms ease-out";
+
       ButtonHome[0].style.display = "none";
       ButtonMenu[0].style.display = "flex";
       shortMenu[0].style.display = "none";
     }
-    return { t, closeMenu,openMenu };
+    return { t, closeMenu, openMenu };
   },
 });
 </script>

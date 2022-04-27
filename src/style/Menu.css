@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav-item-short {
@@ -68,6 +69,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.menu-hamburger-relative{
+    position: relative;
 }
 
 .header-menu {
