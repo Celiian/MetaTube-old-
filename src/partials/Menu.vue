@@ -292,34 +292,13 @@ export default defineComponent({
     });
     function closeMenu() {
       const menu = document.getElementsByClassName("hamburger-menu-container");
-      const ButtonMenu = document.getElementsByClassName("hamburger-button");
-      const ButtonHome = document.getElementsByClassName(
-        "hamburger-button-home"
-      );
-      const shortMenu = document.getElementsByClassName("short-menu");
       menu[0].style.transform = "translateX(var(--menu-width-close))";
       menu[0].style.transition = "transform 280ms ease-out";
-
-      ButtonMenu[0].style.display = "none";
-      ButtonHome[0].style.display = "flex";
-      shortMenu[0].style.display = "flex";
-
-      console.log("meh");
     }
     function openMenu() {
       const menu = document.getElementsByClassName("hamburger-menu-container");
-      const ButtonHome = document.getElementsByClassName(
-        "hamburger-button-home"
-      );
-      const ButtonMenu = document.getElementsByClassName("hamburger-button");
-      const shortMenu = document.getElementsByClassName("short-menu");
-
       menu[0].style.transform = "translateX(var(--menu-width))";
       menu[0].style.transition = "transform 280ms ease-out";
-
-      ButtonHome[0].style.display = "none";
-      ButtonMenu[0].style.display = "flex";
-      shortMenu[0].style.display = "none";
     }
     return { t, closeMenu, openMenu };
   },
