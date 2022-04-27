@@ -89,7 +89,7 @@
                             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg
                     ></router-link>
                 </div>
-                <div v-if="!awesome" class="btn--navbar--register">
+                <div v-if="awesome" class="btn--navbar--register">
                     <router-link to="/login">Login</router-link>
                 </div>
                 <div v-else class="dropdown">
