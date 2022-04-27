@@ -6,6 +6,68 @@
     --nav-elements-hover: rgb(77, 77, 77);
     --hamburger-button-active: rgb(72, 72, 72);
     --menu-border-color: rgb(115, 115, 115);
+    --menu-short-width:
+}
+
+.sticky-menu {
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.short-menu {
+    position: relative;
+    height: 100vh;
+    width: 15%;
+    min-width: 100px;
+    display: flex;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-logo-short{
+    width: 20px;
+    height: 20px;
+}
+
+.nav-item-short p {
+    color:var(--dark-text);
+    font-family: var(--font);
+    font-size: var(--font-small);
+    letter-spacing: 0.8px;
+}
+
+.hamburger-button-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    top: 5px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.short-menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item-short {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-menu {
@@ -24,16 +86,21 @@
     align-items: flex-start;
 }
 
-.menu-container {
-    position: absolute;
+.hamburger-menu-container {
+    position: fixed;
     overflow: hidden;
     top: 0;
+    height: 100vh;
     left: var(--menu-width-close);
     background-color: var(--dark-theme);
     width: var(--menu-width);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
-.menu-container p {
+.hamburger-menu-container p {
     color: var(--dark-text);
     font-family: var(--font);
     font-size: var(--font-small);
@@ -123,7 +190,7 @@
     font-size: var(--font-small);
     margin-left: var(--margin-left-nav-item);
     font-family: var(--font);
-    margin-top:15px;
+    margin-top: 15px;
 }
 
 .links {
